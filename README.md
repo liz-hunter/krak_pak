@@ -11,11 +11,12 @@
 #### read_reports 
 Reads in the reports, accounting for the specific naming scheme and whether there are replicates present
 
-Usage: ```read_reports(directory, report_pattern)```
+Usage: ```read_reports(directory, report_pattern, type = c("default", "bracken", "minimizers")```
 
 Arguments: 
 - directory: file path for the directory of reports (required)
 - report_pattern: regex formatted pattern for the report naming scheme (required)
+- type: type of report (required)
 - replicate: boolean value, default false (optional)
 - replicate_pattern: regex formatted pattern for the replicate naming scheme (req'd if replicates=TRUE)
 
