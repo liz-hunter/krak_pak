@@ -79,4 +79,22 @@ Arguments:
 Example: 
 ```kraken_count(reports, metric = "readsI")```
 
-#### kraken_visualize
+#### compare_taxa_counts
+Takes a list of named dataframes, and outputs a graph or a table with a summary of the number of taxa identified in each dataframe. This function expects that the same samples are present in each dataframe and will throw an error if this is not the case, but it will still run even if some samples are missing from some analyses. 
+
+Usage: 
+```compare_taxa_counts(df_list, output = c("table", "graph"))```
+
+Arguments: 
+- df_list: a list of named dataframes to summarise that include taxID and sample_ID columns (required)
+- output: the output type desired, a table or a graph (required)
+
+Example:
+```
+mydata <- list(
+  "kraken" = kraken2,
+  "bracken" = bracken2
+)
+
+mygraph <- compare_taxa_counts(mydata, output="graph")
+```
