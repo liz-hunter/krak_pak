@@ -1,4 +1,4 @@
-# Krak Pack Toolkit
+# Krak Pak Toolkit
 
 ### Toolkit built to parse and filter kraken and bracken formatted reports 
 
